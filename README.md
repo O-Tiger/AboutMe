@@ -1,12 +1,22 @@
-# React + Vite
+# ℹ️ Projeto Básico de Perfil
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é um projeto React + Vite que exibe um site pessoal.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🧠 Funcionalidades
 
-## Expanding the ESLint configuration
+- 🌗 Alternância de tema (claro/escuro) com `localStorage`
+- 💼 Conteúdo pessoal com badges, tabelas e links
+- 🐱‍💻 React modular com componentes reutilizáveis
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🚀 O que usei
+
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+- Markdown CSS da [GitHub Markdown Style](https://github.com/sindresorhus/github-markdown-css)
+
+---
