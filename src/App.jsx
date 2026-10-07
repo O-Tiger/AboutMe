@@ -7,6 +7,9 @@ import './App.css';
 function App() {
   const [lang, setLang] = useState(() => localStorage.getItem("lang") || "pt");
 
+  // Text typed in the mobile-only input; EasterEgg matches egg codes against it
+  const [eggInput, setEggInput] = useState("");
+
   useEffect(() => {
     localStorage.setItem("lang", lang);
   }, [lang]);
@@ -15,9 +18,9 @@ function App() {
     <>
       <ThemeToggle lang={lang} setLang={setLang} />
       <div className="wrapper">
-        <Content lang={lang} />
+        <Content lang={lang} setMobileEggInput={setEggInput} />
       </div>
-      <EasterEgg />
+      <EasterEgg externalInput={eggInput} />
     </>
   );
 }
