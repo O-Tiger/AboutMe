@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import GitHubStats from "./GitHubStats";
 
 // ─── Status sort priority (lower = higher on page) ───────────────────────────
 const STATUS_ORDER = { wip: 0, active: 1, paused: 2, discontinued: 3 };
@@ -26,6 +27,7 @@ const i18n = {
     ],
     animeLabel: "Fã de anime e mangá",
     projectsTitle: "Projetos Pessoais e Trabalhos Antigos",
+    statsTitle: "GitHub Stats",
     eggTitle: "Easter Eggs",
     eggHint: "Digite palavras mágicas no teclado e veja o que acontece...",
     eggInputPlaceholder: "Digite aqui...",
@@ -53,6 +55,7 @@ const i18n = {
     ],
     animeLabel: "Anime & manga fan",
     projectsTitle: "Side Projects & Older Work",
+    statsTitle: "GitHub Stats",
     eggTitle: "Easter Eggs",
     eggHint: "Type magic words on your keyboard and see what happens...",
     eggInputPlaceholder: "Type here...",
@@ -212,7 +215,7 @@ export default function Content({ lang = "pt", setMobileEggInput = () => { } }) 
     <>
       {/* Hero */}
       <div className="hero">
-        <h1 className="hero-name">🐯 <span className="name-text">O-Tiger</span></h1>
+        <h1 className="hero-name"><span className="tiger">🐯</span> <span className="name-text">O-Tiger</span></h1>
         <p className="hero-sub">
           {t.heroSub.split(" · ").map((s, i, arr) => (
             <span key={i}>{s}{i < arr.length - 1 ? <> · </> : ""}</span>
@@ -273,6 +276,12 @@ export default function Content({ lang = "pt", setMobileEggInput = () => { } }) 
             </div>
           ))}
         </div>
+      </div>
+
+      {/* Stats */}
+      <div className="section">
+        <h2>📊 {t.statsTitle}</h2>
+        <GitHubStats lang={lang} />
       </div>
 
       {/* Easter Eggs */}

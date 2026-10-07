@@ -1,17 +1,11 @@
 import { useState, useEffect } from "react";
+import { applyTheme, getInitialTheme } from "./theme.js";
 
 export default function ThemeToggle({ lang, setLang }) {
-  const [theme, setTheme] = useState(() => {
-    return (
-      localStorage.getItem("theme") ||
-      (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
-    );
-  });
+  const [theme, setTheme] = useState(getInitialTheme);
 
   useEffect(() => {
-    document.documentElement.setAttribute("data-theme", theme);
-    document.body.setAttribute("data-theme", theme);
-    localStorage.setItem("theme", theme);
+    applyTheme(theme);
   }, [theme]);
 
   const isDark = theme === "dark";
